@@ -12,14 +12,14 @@ const filters = {
 const FilterButton = ({ label, isOpen, children }) => (
   <Popover.Button
     className={`
-      ${isOpen ? 'text-primary-600' : 'text-gray-700'}
-      group inline-flex items-center rounded-md px-3 py-2 text-base font-medium hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+      ${isOpen ? 'text-indigo-400' : 'text-white/80'}
+      group inline-flex items-center rounded-md px-3 py-2 text-base font-medium hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-black
     `}
   >
     <span>{label}</span>
     <ChevronDownIcon
-      className={`${isOpen ? 'text-primary-600' : 'text-gray-400'} 
-        ml-2 h-5 w-5 group-hover:text-primary-600`}
+      className={`${isOpen ? 'text-indigo-400' : 'text-gray-400'} 
+        ml-2 h-5 w-5 group-hover:text-indigo-400`}
       aria-hidden="true"
     />
   </Popover.Button>
@@ -38,7 +38,7 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
   };
 
   return (
-    <div className="bg-white shadow-sm rounded-lg p-4 mb-6">
+    <div className="bg-black shadow-sm rounded-lg p-4 mb-6">
       <div className="flex flex-wrap gap-4">
         {/* Role Type Filter */}
         <Popover className="relative">
@@ -56,16 +56,16 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
               >
                 <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
                   <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="relative grid gap-6 bg-white p-6">
+                    <div className="relative grid gap-6 bg-black p-6">
                       {filters.roleType.map((type) => (
                         <div key={type} className="flex items-center">
                           <input
                             type="checkbox"
                             checked={activeFilters.roleType?.includes(type)}
                             onChange={() => handleFilterSelect('roleType', type)}
-                            className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                            className="h-4 w-4 rounded border-gray-700 bg-black text-indigo-400 focus:ring-indigo-400"
                           />
-                          <label className="ml-3 text-sm text-gray-700">
+                          <label className="ml-3 text-sm text-white/80">
                             {type}
                           </label>
                         </div>
@@ -94,16 +94,16 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
               >
                 <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
                   <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="relative grid gap-6 bg-white p-6">
+                    <div className="relative grid gap-6 bg-black p-6">
                       {filters.workType.map((type) => (
                         <div key={type} className="flex items-center">
                           <input
                             type="checkbox"
                             checked={activeFilters.workType?.includes(type)}
                             onChange={() => handleFilterSelect('workType', type)}
-                            className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                            className="h-4 w-4 rounded border-gray-700 bg-black text-indigo-400 focus:ring-indigo-400"
                           />
-                          <label className="ml-3 text-sm text-gray-700">
+                          <label className="ml-3 text-sm text-white/80">
                             {type}
                           </label>
                         </div>
@@ -132,24 +132,12 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
               >
                 <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
                   <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="relative bg-white p-6">
+                    <div className="relative bg-black p-6">
                       <div className="space-y-4">
-                        <label className="text-sm font-medium text-gray-900">
+                        <label className="text-sm font-medium text-white/80">
                           Rate Range: ${activeFilters.hourlyRate?.[0] || 0} - ${activeFilters.hourlyRate?.[1] || 200}/hr
                         </label>
                         <div className="relative pt-1">
-                          <input
-                            type="range"
-                            min={filters.hourlyRate.min}
-                            max={filters.hourlyRate.max}
-                            step={filters.hourlyRate.step}
-                            value={activeFilters.hourlyRate?.[1] || filters.hourlyRate.max}
-                            onChange={(e) => handleFilterSelect('hourlyRate', [
-                              activeFilters.hourlyRate?.[0] || filters.hourlyRate.min,
-                              parseInt(e.target.value)
-                            ])}
-                            className="w-full h-2 bg-primary-200 rounded-lg appearance-none cursor-pointer"
-                          />
                           <input
                             type="range"
                             min={filters.hourlyRate.min}
@@ -160,7 +148,19 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
                               parseInt(e.target.value),
                               activeFilters.hourlyRate?.[1] || filters.hourlyRate.max
                             ])}
-                            className="absolute w-full h-2 bg-transparent appearance-none cursor-pointer"
+                            className="absolute w-full h-2 bg-transparent appearance-none cursor-pointer accent-indigo-400"
+                          />
+                          <input
+                            type="range"
+                            min={filters.hourlyRate.min}
+                            max={filters.hourlyRate.max}
+                            step={filters.hourlyRate.step}
+                            value={activeFilters.hourlyRate?.[1] || filters.hourlyRate.max}
+                            onChange={(e) => handleFilterSelect('hourlyRate', [
+                              activeFilters.hourlyRate?.[0] || filters.hourlyRate.min,
+                              parseInt(e.target.value)
+                            ])}
+                            className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
                           />
                         </div>
                       </div>
@@ -179,7 +179,7 @@ const FilterBar = ({ filters: activeFilters, onFilterChange }) => {
             placeholder="Search location..."
             value={activeFilters.location || ''}
             onChange={(e) => handleFilterSelect('location', e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            className="w-full px-3 py-2 bg-black text-white/80 border border-gray-700 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
           />
         </div>
       </div>
