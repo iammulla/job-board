@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 
-const JobCard = ({ job, onLike, onDislike, isLiked, controls }) => {
+const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) => {
   const WorkLocationIcon = job.isRemote ? HomeIcon : job.isHybrid ? HomeIcon : BuildingOfficeIcon;
   const workLocationType = job.isRemote ? "Remote" : job.isHybrid ? "Hybrid" : "On-site";
 
@@ -29,7 +29,7 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md border border-gray-100 max-w-2xl mx-auto">
+    <div className={`bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md border border-gray-100 w-full mx-auto ${className}`}>
       <div className="p-6">
         <div className="flex items-start gap-4">
           {/* Company Logo */}

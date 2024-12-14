@@ -75,7 +75,7 @@ const SwipeView = ({ jobs, onLike, onSkip }) => {
 
   if (!currentJob) {
     return (
-      <div className="flex flex-col items-center justify-center h-[600px] bg-white rounded-xl shadow-md max-w-2xl mx-auto">
+      <div className="flex flex-col items-center justify-center h-[600px] bg-white rounded-xl shadow-md w-full">
         <p className="text-xl text-gray-600 mb-4">No more jobs to show!</p>
         <button
           onClick={() => setCurrentIndex(0)}
@@ -91,7 +91,7 @@ const SwipeView = ({ jobs, onLike, onSkip }) => {
   const workLocationType = currentJob.isRemote ? "Remote" : currentJob.isHybrid ? "Hybrid" : "On-site";
 
   return (
-    <div className="relative h-[600px] max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="relative h-[600px] w-full bg-white rounded-xl shadow-md overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
@@ -110,7 +110,7 @@ const SwipeView = ({ jobs, onLike, onSkip }) => {
           onDragEnd={handleDragEnd}
           className="absolute w-full h-full"
         >
-          <div className="p-6 h-full flex flex-col">
+          <div className="p-6 h-full flex flex-col w-full">
             <div className="flex items-start gap-4 mb-6">
               <img
                 src={currentJob.logo}

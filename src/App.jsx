@@ -114,44 +114,22 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900">Tech Job Board</h1>
           <p className="mt-2 text-xl text-gray-600">Find your next opportunity</p>
         </header>
 
-        <div className="w-full max-w-5xl mx-auto">
-          <div className="flex justify-between items-center mb-6">
-            <FilterBar filters={filters} onFilterChange={setFilters} />
-            
-            <div className="flex space-x-2 ml-4">
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg ${
-                  viewMode === 'list'
-                    ? 'bg-primary-100 text-primary-600'
-                    : 'bg-gray-100 text-gray-600'
-                } hover:bg-primary-50 transition-colors`}
-                title="List View"
-              >
-                <ViewColumnsIcon className="h-6 w-6" />
-              </button>
-              <button
-                onClick={() => setViewMode('swipe')}
-                className={`p-2 rounded-lg ${
-                  viewMode === 'swipe'
-                    ? 'bg-primary-100 text-primary-600'
-                    : 'bg-gray-100 text-gray-600'
-                } hover:bg-primary-50 transition-colors`}
-                title="Swipe View"
-              >
-                <ViewfinderCircleIcon className="h-6 w-6" />
-              </button>
-            </div>
-          </div>
+        <FilterBar 
+          filters={filters} 
+          onFilterChange={setFilters} 
+          viewMode={viewMode}
+          onViewModeChange={setViewMode}
+        />
 
+        <div className="w-full max-w-5xl mx-auto">
           {viewMode === 'list' ? (
-            <div className="space-y-6">
+            <div className="space-y-6 max-w-4xl mx-auto">
               {filteredJobs.map(job => (
                 <JobCard
                   key={job.id}
@@ -167,11 +145,13 @@ function App() {
               )}
             </div>
           ) : (
-            <SwipeView
-              jobs={filteredJobs}
-              onLike={handleLikeJob}
-              onSkip={handleSkipJob}
-            />
+            <div className="max-w-4xl mx-auto">
+              <SwipeView
+                jobs={filteredJobs}
+                onLike={handleLikeJob}
+                onSkip={handleSkipJob}
+              />
+            </div>
           )}
         </div>
       </div>
