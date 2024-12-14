@@ -47,13 +47,12 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
 
               <button
                 onClick={handleHeartClick}
-                className="p-2 hover:bg-gray-50 rounded-full transition-colors duration-200 flex-shrink-0"
-                aria-label={isLiked ? "Unlike job" : "Like job"}
+                className="ml-2 p-2 text-gray-400 hover:text-gray-500"
               >
                 {isLiked ? (
-                  <HeartSolidIcon className="h-5 w-5 text-primary-500" />
+                  <HeartSolidIcon className="h-6 w-6 text-indigo-600" />
                 ) : (
-                  <HeartOutlineIcon className="h-5 w-5 text-gray-400 hover:text-primary-500" />
+                  <HeartOutlineIcon className="h-6 w-6" />
                 )}
               </button>
             </div>
@@ -105,7 +104,7 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
                         <img 
                           src={consultant.avatar} 
                           alt={consultant.name}
-                          className="w-8 h-8 rounded-full"
+                          className="w-10 h-10 rounded-full"
                         />
                         <div>
                           <p className="text-sm font-medium text-gray-900">{consultant.name}</p>
