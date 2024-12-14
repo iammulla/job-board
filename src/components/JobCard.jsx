@@ -1,8 +1,7 @@
-import React from 'react';
-import { 
-  MapPinIcon, 
-  CurrencyDollarIcon,
+import {
+  MapPinIcon,
   BriefcaseIcon,
+  CurrencyDollarIcon,
   HeartIcon as HeartOutlineIcon,
   ChevronRightIcon,
   HomeIcon,
@@ -14,18 +13,14 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
   const WorkLocationIcon = job.isRemote ? HomeIcon : job.isHybrid ? HomeIcon : BuildingOfficeIcon;
   const workLocationType = job.isRemote ? "Remote" : job.isHybrid ? "Hybrid" : "On-site";
 
-  const handleHeartClick = () => {
-    controls.start({ x: 200, opacity: 0 });  // Right swipe for like
-    setTimeout(() => {
-      onLike();
-    }, 200);
+  const handleHeartClick = (e) => {
+    e.preventDefault();
+    onLike(job.id);
   };
 
-  const handleXClick = () => {
-    controls.start({ x: -200, opacity: 0 });  // Left swipe for dislike
-    setTimeout(() => {
-      onDislike();
-    }, 200);
+  const handleXClick = (e) => {
+    e.preventDefault();
+    onDislike?.(job.id);
   };
 
   return (
@@ -48,6 +43,7 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
                 </h2>
                 <p className="text-sm text-gray-600 mb-2">{job.company}</p>
               </div>
+
               <button
                 onClick={handleHeartClick}
                 className="p-2 hover:bg-gray-50 rounded-full transition-colors duration-200 flex-shrink-0"

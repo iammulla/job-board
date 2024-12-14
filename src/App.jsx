@@ -58,7 +58,7 @@ function App() {
     // Filter by experience level
     if (
       filters.experienceLevel.length > 0 &&
-      !filters.experienceLevel.includes(job.experienceLevel)
+      !filters.experienceLevel.includes(job.experience)
     ) {
       return false;
     }
