@@ -22,7 +22,23 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: true,
-    isHybrid: false
+    isHybrid: false,
+    consultants: [
+      {
+        name: "Sarah Chen",
+        avatar: "https://ui-avatars.com/api/?name=SC&background=818cf8&color=fff",
+        experience: "Senior Full Stack Engineer at Google",
+        rate: 150,
+        bookingUrl: "https://calendly.com/sarah-chen"
+      },
+      {
+        name: "Michael Rodriguez",
+        avatar: "https://ui-avatars.com/api/?name=MR&background=818cf8&color=fff",
+        experience: "Ex-TechCorp Engineering Manager",
+        rate: 200,
+        bookingUrl: "https://calendly.com/michael-rodriguez"
+      }
+    ]
   },
   {
     id: 2,
@@ -47,7 +63,16 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: false,
-    isHybrid: true
+    isHybrid: true,
+    consultants: [
+      {
+        name: "Emily Johnson",
+        avatar: "https://ui-avatars.com/api/?name=EJ&background=818cf8&color=fff",
+        experience: "Tech Lead at WebSolutions",
+        rate: 175,
+        bookingUrl: "https://calendly.com/emily-johnson"
+      }
+    ]
   },
   {
     id: 3,
@@ -72,7 +97,23 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: true,
-    isHybrid: false
+    isHybrid: false,
+    consultants: [
+      {
+        name: "David Kim",
+        avatar: "https://ui-avatars.com/api/?name=DK&background=818cf8&color=fff",
+        experience: "Senior DevOps Engineer at AWS",
+        rate: 160,
+        bookingUrl: "https://calendly.com/david-kim"
+      },
+      {
+        name: "Lisa Thompson",
+        avatar: "https://ui-avatars.com/api/?name=LT&background=818cf8&color=fff",
+        experience: "Cloud Architect at CloudScale",
+        rate: 190,
+        bookingUrl: "https://calendly.com/lisa-thompson"
+      }
+    ]
   },
   {
     id: 4,
@@ -97,7 +138,16 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: false,
-    isHybrid: true
+    isHybrid: true,
+    consultants: [
+      {
+        name: "Jessica Lee",
+        avatar: "https://ui-avatars.com/api/?name=JL&background=818cf8&color=fff",
+        experience: "Senior UI/UX Designer at DesignHub",
+        rate: 140,
+        bookingUrl: "https://calendly.com/jessica-lee"
+      }
+    ]
   },
   {
     id: 5,
@@ -122,7 +172,16 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: true,
-    isHybrid: false
+    isHybrid: false,
+    consultants: [
+      {
+        name: "Kevin White",
+        avatar: "https://ui-avatars.com/api/?name=KW&background=818cf8&color=fff",
+        experience: "Senior Machine Learning Engineer at AI Innovations",
+        rate: 180,
+        bookingUrl: "https://calendly.com/kevin-white"
+      }
+    ]
   },
   {
     id: 6,
@@ -147,6 +206,15 @@ export const mockJobs = [
     ],
     applyUrl: 'https://example.com/apply',
     isRemote: false,
-    isHybrid: false
+    isHybrid: false,
+    consultants: [
+      {
+        name: "Alex Brown",
+        avatar: "https://ui-avatars.com/api/?name=AB&background=818cf8&color=fff",
+        experience: "Backend Developer at StartupX",
+        rate: 120,
+        bookingUrl: "https://calendly.com/alex-brown"
+      }
+    ]
   }
 ];

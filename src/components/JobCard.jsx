@@ -5,7 +5,8 @@ import {
   HeartIcon as HeartOutlineIcon,
   ChevronRightIcon,
   HomeIcon,
-  BuildingOfficeIcon
+  BuildingOfficeIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 
@@ -89,6 +90,39 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
                 ))}
               </ul>
             </div>
+
+            {/* Role Consultants */}
+            {job.consultants && job.consultants.length > 0 && (
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <UserGroupIcon className="h-4 w-4 text-gray-400" />
+                  <h3 className="text-sm font-medium text-gray-900">Role Consultants</h3>
+                </div>
+                <div className="space-y-3">
+                  {job.consultants.slice(0, 2).map((consultant, index) => (
+                    <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-2">
+                      <div className="flex items-center gap-2">
+                        <img 
+                          src={consultant.avatar} 
+                          alt={consultant.name}
+                          className="w-8 h-8 rounded-full"
+                        />
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">{consultant.name}</p>
+                          <p className="text-xs text-gray-500">{consultant.experience}</p>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={() => window.open(consultant.bookingUrl, '_blank')}
+                        className="px-3 py-1.5 text-xs font-medium text-primary-600 hover:text-primary-700 bg-white rounded-md border border-gray-200 hover:border-primary-200 transition-colors"
+                      >
+                        Book ${consultant.rate}/hr
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
