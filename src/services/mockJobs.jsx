@@ -26,14 +26,14 @@ export const mockJobs = [
     consultants: [
       {
         name: "Sarah Chen",
-        avatar: "https://ui-avatars.com/api/?name=SC&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/women/1.jpg",
         experience: "Senior Full Stack Engineer at Google",
         rate: 150,
         bookingUrl: "https://calendly.com/sarah-chen"
       },
       {
         name: "Michael Rodriguez",
-        avatar: "https://ui-avatars.com/api/?name=MR&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/men/1.jpg",
         experience: "Ex-TechCorp Engineering Manager",
         rate: 200,
         bookingUrl: "https://calendly.com/michael-rodriguez"
@@ -67,7 +67,7 @@ export const mockJobs = [
     consultants: [
       {
         name: "Emily Johnson",
-        avatar: "https://ui-avatars.com/api/?name=EJ&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/women/2.jpg",
         experience: "Tech Lead at WebSolutions",
         rate: 175,
         bookingUrl: "https://calendly.com/emily-johnson"
@@ -101,14 +101,14 @@ export const mockJobs = [
     consultants: [
       {
         name: "David Kim",
-        avatar: "https://ui-avatars.com/api/?name=DK&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/men/2.jpg",
         experience: "Senior DevOps Engineer at AWS",
         rate: 160,
         bookingUrl: "https://calendly.com/david-kim"
       },
       {
         name: "Lisa Thompson",
-        avatar: "https://ui-avatars.com/api/?name=LT&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/women/3.jpg",
         experience: "Cloud Architect at CloudScale",
         rate: 190,
         bookingUrl: "https://calendly.com/lisa-thompson"
@@ -142,7 +142,7 @@ export const mockJobs = [
     consultants: [
       {
         name: "Jessica Lee",
-        avatar: "https://ui-avatars.com/api/?name=JL&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/women/4.jpg",
         experience: "Senior UI/UX Designer at DesignHub",
         rate: 140,
         bookingUrl: "https://calendly.com/jessica-lee"
@@ -176,7 +176,7 @@ export const mockJobs = [
     consultants: [
       {
         name: "Kevin White",
-        avatar: "https://ui-avatars.com/api/?name=KW&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/men/3.jpg",
         experience: "Senior Machine Learning Engineer at AI Innovations",
         rate: 180,
         bookingUrl: "https://calendly.com/kevin-white"
@@ -210,7 +210,7 @@ export const mockJobs = [
     consultants: [
       {
         name: "Alex Brown",
-        avatar: "https://ui-avatars.com/api/?name=AB&background=818cf8&color=fff",
+        avatar: "https://randomuser.me/api/portraits/men/4.jpg",
         experience: "Backend Developer at StartupX",
         rate: 120,
         bookingUrl: "https://calendly.com/alex-brown"
