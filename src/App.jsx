@@ -76,11 +76,11 @@ function App() {
   return (
     <div className="min-h-screen w-full bg-gray-50">
       {/* Top Navigation Bar */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 border-b border-primary-700">
+      <div className="bg-black border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12">
             {/* Location */}
-            <div className="flex items-center text-sm text-white/80">
+            <div className="flex items-center text-sm text-white/80 hover:text-primary-400 transition-colors cursor-pointer">
               <MapPinIcon className="h-4 w-4 mr-1" />
               <span>New York, USA</span>
             </div>
