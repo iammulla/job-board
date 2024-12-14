@@ -9,7 +9,8 @@ import {
   ViewfinderCircleIcon,
   UserCircleIcon,
   HeartIcon,
-  MapPinIcon
+  MapPinIcon,
+  ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline'
 
 function App() {
@@ -77,16 +78,16 @@ function App() {
     <div className="min-h-screen w-full bg-gray-50">
       {/* Top Navigation Bar */}
       <div className="bg-black border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-12">
+        <div className="max-w-7xl mx-auto px-4 py-1.5 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-11">
             {/* Location */}
-            <div className="flex items-center text-sm text-white/80 hover:text-indigo-400 transition-colors cursor-pointer">
-              <MapPinIcon className="h-4 w-4 mr-1" />
+            <div className="flex items-center text-base text-white/80 hover:text-indigo-400 transition-colors cursor-pointer">
+              <MapPinIcon className="h-5 w-5 mr-1" />
               <span>New York, USA</span>
             </div>
             
             {/* Navigation Links */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4">
               <button 
                 ref={likedJobsButtonRef}
                 onClick={() => setIsLikedJobsOpen(!isLikedJobsOpen)}
@@ -105,7 +106,7 @@ function App() {
                 <span>Profile</span>
               </button>
               <button className="flex items-center text-sm text-white hover:text-gray-200 transition-colors">
-                <UserCircleIcon className="h-4 w-4 mr-1 text-white" />
+                <ArrowRightOnRectangleIcon className="h-4 w-4 mr-1 text-white" />
                 <span>Login / Sign Up</span>
               </button>
             </div>
