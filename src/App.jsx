@@ -80,7 +80,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-12">
             {/* Location */}
-            <div className="flex items-center text-sm text-white/80 hover:text-primary-400 transition-colors cursor-pointer">
+            <div className="flex items-center text-sm text-white/80 hover:text-indigo-400 transition-colors cursor-pointer">
               <MapPinIcon className="h-4 w-4 mr-1" />
               <span>New York, USA</span>
             </div>
