@@ -54,7 +54,7 @@ const ProfileMenu = ({ isAuthenticated, onLogin, onSignUp }) => {
             {isAuthenticated ? (
               <div>
                 <button
-                  className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:text-indigo-400 hover:bg-gray-50 transition-colors"
+                  className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors"
                   onClick={() => {
                     console.log('Account Settings clicked');
                     setShowDropdown(false);
@@ -64,7 +64,7 @@ const ProfileMenu = ({ isAuthenticated, onLogin, onSignUp }) => {
                 </button>
                 <div className="border-t border-gray-100">
                   <button
-                    className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:text-indigo-400 hover:bg-gray-50 transition-colors rounded-b-lg"
+                    className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors rounded-b-lg"
                     onClick={() => {
                       console.log('Update Resume clicked');
                       setShowDropdown(false);
@@ -77,7 +77,7 @@ const ProfileMenu = ({ isAuthenticated, onLogin, onSignUp }) => {
             ) : (
               <div>
                 <button
-                  className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:text-indigo-400 hover:bg-gray-50 transition-colors"
+                  className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors"
                   onClick={() => {
                     onLogin();
                     setShowDropdown(false);
@@ -87,7 +87,7 @@ const ProfileMenu = ({ isAuthenticated, onLogin, onSignUp }) => {
                 </button>
                 <div className="border-t border-gray-100">
                   <button
-                    className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:text-indigo-400 hover:bg-gray-50 transition-colors rounded-b-lg"
+                    className="block w-full text-left px-4 py-3 text-sm text-gray-900 hover:bg-gray-50 transition-colors rounded-b-lg"
                     onClick={() => {
                       onSignUp();
                       setShowDropdown(false);
