@@ -55,7 +55,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             transition={{ duration: 0.15, ease: "easeOut" }}
             style={{
               position: 'absolute',
-              top: buttonRef.current.getBoundingClientRect().bottom + 8,
+              top: buttonRef.current.getBoundingClientRect().bottom + 4,
               right: 0,
               transform: 'translateX(0)',
             }}
