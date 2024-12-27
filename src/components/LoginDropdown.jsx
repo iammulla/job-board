@@ -55,7 +55,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             transition={{ duration: 0.15, ease: "easeOut" }}
             style={{
               position: 'absolute',
-              top: 'calc(100% + 1px)',
+              top: 'calc(100% + 6px)',
               right: 0,
               transform: 'translateX(0)',
             }}
