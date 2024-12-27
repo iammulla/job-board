@@ -39,7 +39,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
       <button
         ref={buttonRef}
         onClick={() => setShowDropdown(!showDropdown)}
-        className="flex items-center text-sm text-white hover:text-gray-200 transition-colors"
+        className="flex items-center text-sm text-white hover:text-gray-200 transition-colors relative"
       >
         <ArrowRightOnRectangleIcon className="h-4 w-4 mr-1 text-white" />
         <span>Login / Sign Up</span>
@@ -55,7 +55,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             transition={{ duration: 0.15, ease: "easeOut" }}
             style={{
               position: 'absolute',
-              top: buttonRef.current.getBoundingClientRect().bottom + 4,
+              top: buttonRef.current.getBoundingClientRect().bottom + 2,
               right: 0,
               transform: 'translateX(0)',
             }}
