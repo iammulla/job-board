@@ -77,7 +77,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-indigo-400"
                     placeholder="Enter your email"
                     required
                   />
@@ -91,14 +91,14 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+                    className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-indigo-400"
                     placeholder="Enter your password"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary-600 text-white rounded-md px-4 py-2 text-sm font-medium hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                  className="w-full bg-indigo-400 text-white rounded-md px-4 py-2 text-sm font-medium hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
                 >
                   Login
                 </button>
@@ -112,7 +112,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
                   onSignUp();
                   setShowDropdown(false);
                 }}
-                className="flex items-center justify-center px-4 py-3 text-sm text-primary-600 hover:text-primary-700 hover:bg-gray-50 transition-colors rounded-b-lg w-full"
+                className="flex items-center justify-center px-4 py-3 text-sm text-indigo-400 hover:text-indigo-500 hover:bg-gray-50 transition-colors rounded-b-lg w-full"
               >
                 Not a member? Sign Up
               </button>
