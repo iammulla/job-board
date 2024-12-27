@@ -35,7 +35,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative inline-block">
       <button
         ref={buttonRef}
         onClick={() => setShowDropdown(!showDropdown)}
@@ -56,8 +56,8 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             style={{
               position: 'absolute',
               top: buttonRef.current.getBoundingClientRect().bottom + 8,
-              left: buttonRef.current.getBoundingClientRect().left,
-              transform: 'translateX(-50%)',
+              right: 0,
+              transform: 'translateX(0)',
             }}
             className="z-50 w-80 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           >
