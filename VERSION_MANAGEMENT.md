@@ -2,20 +2,20 @@
 
 ## Important Versions
 
+### JobProductV1.2 (Latest)
+Enhanced version with Login/Sign Up dropdown functionality.
+
+To switch to this version:
+```bash
+git checkout v1.2
+```
+
 ### JobProductV1.1 (Clean Backup)
 This is a clean backup of the job board before adding dropdown functionality.
 
 To revert to this version:
 ```bash
 git checkout v1.1-backup
-```
-
-### JobProductV1.2 (Dropdown Features)
-This version includes the location and profile dropdown functionality.
-
-To switch to this version:
-```bash
-git checkout JobProductV1.2
 ```
 
 After switching versions, always restart the development server:
@@ -36,10 +36,17 @@ git checkout -b feature/dropdowns
 
 ## Version History
 
-- **JobProductV1.2**: Enhanced version with location and profile dropdowns
+- **v1.2**: Added Login/Sign Up dropdown with email/password form and styling
 - **v1.1-backup**: Clean version with working job board, swipe functionality, and original header design
 - **JobProductV1.1**: Enhanced version with liked jobs feature
 - **JobProductV1**: Initial version with basic swipe functionality
+
+## Features Added in v1.2
+- Login/Sign Up dropdown with email and password fields
+- Consistent styling with the rest of the application
+- Interactive hover effects and focus states
+- Responsive form design
+- Clean transitions and animations
 
 ## Notes
 - Always create a new branch when working on new features
