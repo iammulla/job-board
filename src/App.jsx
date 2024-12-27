@@ -4,10 +4,10 @@ import JobCard from './components/JobCard'
 import FilterBar from './components/FilterBar'
 import SwipeView from './components/SwipeView'
 import LikedJobsPopup from './components/LikedJobsPopup'
+import ProfileMenu from './components/ProfileMenu'
 import { 
   ViewColumnsIcon, 
   ViewfinderCircleIcon,
-  UserCircleIcon,
   HeartIcon,
   MapPinIcon,
   ArrowRightOnRectangleIcon
@@ -17,6 +17,7 @@ function App() {
   const [likedJobs, setLikedJobs] = useState([]);
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'swipe'
   const [isLikedJobsOpen, setIsLikedJobsOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const likedJobsButtonRef = useRef(null);
   const [filters, setFilters] = useState({
     roleType: [],
@@ -37,6 +38,18 @@ function App() {
 
   const handleSkipJob = () => {
     // Optional: Add skip logic here if needed
+  };
+
+  const handleLogin = () => {
+    console.log('Login clicked');
+    // Add your login logic here
+    setIsAuthenticated(true);
+  };
+
+  const handleSignUp = () => {
+    console.log('Sign up clicked');
+    // Add your sign up logic here
+    setIsAuthenticated(true);
   };
 
   const filteredJobs = mockJobs.filter(job => {
@@ -101,14 +114,11 @@ function App() {
                   </span>
                 )}
               </button>
-              <button className="flex items-center text-sm text-white hover:text-gray-200 transition-colors">
-                <UserCircleIcon className="h-4 w-4 mr-1 text-white" />
-                <span>Profile</span>
-              </button>
-              <button className="flex items-center text-sm text-white hover:text-gray-200 transition-colors">
-                <ArrowRightOnRectangleIcon className="h-4 w-4 mr-1 text-white" />
-                <span>Login / Sign Up</span>
-              </button>
+              <ProfileMenu 
+                isAuthenticated={isAuthenticated}
+                onLogin={handleLogin}
+                onSignUp={handleSignUp}
+              />
             </div>
           </div>
         </div>
