@@ -1,17 +1,18 @@
-import { useState, useRef } from 'react'
-import { mockJobs } from './services/mockJobs.jsx'
-import JobCard from './components/JobCard'
-import FilterBar from './components/FilterBar'
-import SwipeView from './components/SwipeView'
-import LikedJobsPopup from './components/LikedJobsPopup'
-import ProfileMenu from './components/ProfileMenu'
+import { useState, useRef } from 'react';
+import { mockJobs } from './services/mockJobs.jsx';
+import JobCard from './components/JobCard';
+import FilterBar from './components/FilterBar';
+import SwipeView from './components/SwipeView';
+import LikedJobsPopup from './components/LikedJobsPopup';
+import ProfileMenu from './components/ProfileMenu';
+import LoginDropdown from './components/LoginDropdown';
 import { 
   ViewColumnsIcon, 
   ViewfinderCircleIcon,
   HeartIcon,
   MapPinIcon,
   ArrowRightOnRectangleIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 
 function App() {
   const [likedJobs, setLikedJobs] = useState([]);
@@ -40,8 +41,8 @@ function App() {
     // Optional: Add skip logic here if needed
   };
 
-  const handleLogin = () => {
-    console.log('Login clicked');
+  const handleLogin = (email, password) => {
+    console.log('Login clicked', { email, password });
     // Add your login logic here
     setIsAuthenticated(true);
   };
@@ -49,7 +50,7 @@ function App() {
   const handleSignUp = () => {
     console.log('Sign up clicked');
     // Add your sign up logic here
-    setIsAuthenticated(true);
+    // You can navigate to sign up page or show sign up modal
   };
 
   const filteredJobs = mockJobs.filter(job => {
@@ -120,13 +121,10 @@ function App() {
                 onSignUp={handleSignUp}
               />
               {!isAuthenticated && (
-                <button 
-                  onClick={handleLogin}
-                  className="flex items-center text-sm text-white hover:text-gray-200 transition-colors"
-                >
-                  <ArrowRightOnRectangleIcon className="h-4 w-4 mr-1 text-white" />
-                  <span>Login / Sign Up</span>
-                </button>
+                <LoginDropdown 
+                  onLogin={handleLogin}
+                  onSignUp={handleSignUp}
+                />
               )}
             </div>
           </div>
