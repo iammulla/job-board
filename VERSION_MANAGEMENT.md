@@ -2,7 +2,15 @@
 
 ## Important Versions
 
-### JobProductV1.2 (Latest)
+### JobProductV1.3 (Development)
+Current development branch for new features.
+
+To switch to this version:
+```bash
+git checkout JobProductV1.3
+```
+
+### JobProductV1.2 (Stable)
 Enhanced version with Login/Sign Up dropdown functionality.
 
 To switch to this version:
@@ -36,6 +44,7 @@ git checkout -b feature/dropdowns
 
 ## Version History
 
+- **JobProductV1.3**: Development branch for new features (in progress)
 - **v1.2**: Added Login/Sign Up dropdown with email/password form and styling
 - **v1.1-backup**: Clean version with working job board, swipe functionality, and original header design
 - **JobProductV1.1**: Enhanced version with liked jobs feature
@@ -52,3 +61,5 @@ git checkout -b feature/dropdowns
 - Always create a new branch when working on new features
 - If something goes wrong, you can always return to the clean backup using `git checkout v1.1-backup`
 - After switching branches, make sure to restart the development server with `npm run dev`
+- JobProductV1.2 (v1.2) is our stable version with working dropdown functionality
+- JobProductV1.3 is our current development branch for new features
