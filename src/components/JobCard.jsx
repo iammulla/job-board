@@ -9,6 +9,7 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
+import MatchScore from './MatchScore';
 
 const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) => {
   const WorkLocationIcon = job.isRemote ? HomeIcon : job.isHybrid ? HomeIcon : BuildingOfficeIcon;
@@ -89,6 +90,9 @@ const JobCard = ({ job, onLike, onDislike, isLiked, controls, className = '' }) 
                 ))}
               </ul>
             </div>
+
+            {/* Match Score */}
+            {job.scores && <MatchScore scores={job.scores} />}
 
             {/* Role Consultants */}
             {job.consultants && job.consultants.length > 0 && (
