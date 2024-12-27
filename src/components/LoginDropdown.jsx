@@ -64,9 +64,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             <div className="p-4">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm text-gray-700">
-                    Email
-                  </label>
+                  <h3 className="text-sm font-medium text-gray-900">Email</h3>
                   <input
                     type="email"
                     id="email"
@@ -78,9 +76,7 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="password" className="block text-sm text-gray-700">
-                    Password
-                  </label>
+                  <h3 className="text-sm font-medium text-gray-900">Password</h3>
                   <input
                     type="password"
                     id="password"
