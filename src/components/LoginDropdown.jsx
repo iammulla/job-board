@@ -60,11 +60,6 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             }}
             className="z-50 w-80 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           >
-            {/* Header */}
-            <div className="px-4 py-3 border-b border-gray-100">
-              <h3 className="text-sm font-medium text-gray-900">Login</h3>
-            </div>
-
             {/* Form */}
             <div className="p-4">
               <form onSubmit={handleSubmit} className="space-y-4">
