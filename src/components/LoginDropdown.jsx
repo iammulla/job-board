@@ -56,7 +56,8 @@ const LoginDropdown = ({ onLogin, onSignUp }) => {
             style={{
               position: 'absolute',
               top: buttonRef.current.getBoundingClientRect().bottom + 8,
-              right: 0,
+              left: buttonRef.current.getBoundingClientRect().left,
+              transform: 'translateX(-50%)',
             }}
             className="z-50 w-80 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           >
