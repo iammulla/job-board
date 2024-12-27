@@ -119,6 +119,15 @@ function App() {
                 onLogin={handleLogin}
                 onSignUp={handleSignUp}
               />
+              {!isAuthenticated && (
+                <button 
+                  onClick={handleLogin}
+                  className="flex items-center text-sm text-white hover:text-gray-200 transition-colors"
+                >
+                  <ArrowRightOnRectangleIcon className="h-4 w-4 mr-1 text-white" />
+                  <span>Login / Sign Up</span>
+                </button>
+              )}
             </div>
           </div>
         </div>
