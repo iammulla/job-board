@@ -132,9 +132,34 @@ function App() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">RoleArc</h1>
-          <p className="mt-2 text-xl text-gray-600">Design your next role</p>
+        <header className="text-center mb-12">
+          <div className="mb-8">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent mb-4">
+              RoleArc
+            </h1>
+            <p className="text-2xl text-gray-600 font-medium">Design your next role.</p>
+            <div className="mt-6 max-w-2xl mx-auto">
+              <p className="text-gray-500">
+                AI-powered job matching that understands your skills and potential. 
+                Swipe through personalized opportunities that align with your career goals.
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center space-x-12 text-center">
+            <div className="px-4">
+              <div className="text-2xl font-semibold text-indigo-600 mb-1">93%</div>
+              <div className="text-sm text-gray-600">Match Accuracy</div>
+            </div>
+            <div className="px-4 border-l border-r border-gray-200">
+              <div className="text-2xl font-semibold text-indigo-600 mb-1">10k+</div>
+              <div className="text-sm text-gray-600">Active Roles</div>
+            </div>
+            <div className="px-4">
+              <div className="text-2xl font-semibold text-indigo-600 mb-1">24hr</div>
+              <div className="text-sm text-gray-600">Response Time</div>
+            </div>
+          </div>
         </header>
 
         <FilterBar 
