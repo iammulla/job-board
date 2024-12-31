@@ -6,6 +6,7 @@ import SwipeView from './components/SwipeView';
 import LikedJobsPopup from './components/LikedJobsPopup';
 import ProfileMenu from './components/ProfileMenu';
 import LoginDropdown from './components/LoginDropdown';
+import RoleArcLogo from './components/RoleArcLogo';
 import { 
   ViewColumnsIcon, 
   ViewfinderCircleIcon,
@@ -134,9 +135,12 @@ function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <header className="text-center mb-12">
           <div className="mb-8">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent mb-4">
-              RoleArc
-            </h1>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <RoleArcLogo size={48} />
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                RoleArc
+              </h1>
+            </div>
             <p className="text-2xl text-gray-600 font-medium">Design your next role.</p>
             <div className="mt-6 max-w-2xl mx-auto">
               <p className="text-gray-500">
