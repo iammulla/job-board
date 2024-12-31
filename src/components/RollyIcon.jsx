@@ -10,32 +10,73 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Main chat bubble shape */}
+      {/* Base circle */}
+      <circle cx="12" cy="12" r="10" fill="currentColor" />
+      
+      {/* Robot face plate */}
       <path
-        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"
-        fill="currentColor"
+        d="M6 11C6 8.79086 8.79086 6 12 6C15.2091 6 18 8.79086 18 11V15C18 16.1046 17.1046 17 16 17H8C6.89543 17 6 16.1046 6 15V11Z"
+        fill="white"
         fillOpacity="0.9"
       />
       
-      {/* Robot eyes */}
-      <circle cx="8" cy="12" r="2" fill="white" />
-      <circle cx="16" cy="12" r="2" fill="white" />
+      {/* Eyes */}
+      <circle cx="9" cy="12" r="1.25" fill="currentColor">
+        <animate
+          attributeName="r"
+          values="1.25;1;1.25"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </circle>
+      <circle cx="15" cy="12" r="1.25" fill="currentColor">
+        <animate
+          attributeName="r"
+          values="1.25;1;1.25"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </circle>
       
       {/* Antenna */}
       <path
-        d="M12 2V4M12 4C13.1046 4 14 4.89543 14 6V6.5"
-        stroke="white"
+        d="M12 3.5V5.5M12 5.5C13.1046 5.5 14 4.60457 14 3.5V3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      >
+        <animate
+          attributeName="d"
+          values="M12 3.5V5.5M12 5.5C13.1046 5.5 14 4.60457 14 3.5V3;
+                  M12 3.5V5.5M12 5.5C13.1046 5.5 14.5 4.60457 14 3.5V3;
+                  M12 3.5V5.5M12 5.5C13.1046 5.5 14 4.60457 14 3.5V3"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </path>
+      
+      {/* Mouth/Speaker */}
+      <path
+        d="M9 14.5C9.5 15.5 10.5 16 12 16C13.5 16 14.5 15.5 15 14.5"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
       
-      {/* Smile */}
+      {/* Signal waves */}
       <path
-        d="M9 16C9.5 17 10.5 18 12 18C13.5 18 14.5 17 15 16"
-        stroke="white"
+        d="M19 10C19.5 11 19.5 13 19 14M5 10C4.5 11 4.5 13 5 14"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
-      />
+      >
+        <animate
+          attributeName="opacity"
+          values="1;0.5;1"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </path>
     </svg>
   );
 };
