@@ -11,7 +11,7 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       className={className}
     >
       {/* Base circle with subtle pulse */}
-      <circle cx="12" cy="12" r="10" fill="currentColor">
+      <circle cx="12" cy="12" r="11" fill="currentColor">
         <animate
           attributeName="opacity"
           values="1;0.9;1"
@@ -22,16 +22,16 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       
       {/* Robot face plate with hover effect */}
       <path
-        d="M7 11.5C7 9.5 9 8 12 8C15 8 17 9.5 17 11.5V14C17 15 16 16 12 16C8 16 7 15 7 14V11.5Z"
+        d="M6.5 11.2C6.5 8.8 8.8 7 12 7C15.2 7 17.5 8.8 17.5 11.2V14C17.5 15.2 16.5 16.5 12 16.5C7.5 16.5 6.5 15.2 6.5 14V11.2Z"
         fill="#EEF2FF"
         fillOpacity="0.95"
       >
         <animate
           attributeName="d"
           values="
-            M7 11.5C7 9.5 9 8 12 8C15 8 17 9.5 17 11.5V14C17 15 16 16 12 16C8 16 7 15 7 14V11.5Z;
-            M7 11.3C7 9.3 9 7.8 12 7.8C15 7.8 17 9.3 17 11.3V14C17 15 16 16 12 16C8 16 7 15 7 14V11.3Z;
-            M7 11.5C7 9.5 9 8 12 8C15 8 17 9.5 17 11.5V14C17 15 16 16 12 16C8 16 7 15 7 14V11.5Z
+            M6.5 11.2C6.5 8.8 8.8 7 12 7C15.2 7 17.5 8.8 17.5 11.2V14C17.5 15.2 16.5 16.5 12 16.5C7.5 16.5 6.5 15.2 6.5 14V11.2Z;
+            M6.5 11C6.5 8.6 8.8 6.8 12 6.8C15.2 6.8 17.5 8.6 17.5 11V14C17.5 15.2 16.5 16.5 12 16.5C7.5 16.5 6.5 15.2 6.5 14V11Z;
+            M6.5 11.2C6.5 8.8 8.8 7 12 7C15.2 7 17.5 8.8 17.5 11.2V14C17.5 15.2 16.5 16.5 12 16.5C7.5 16.5 6.5 15.2 6.5 14V11.2Z
           "
           dur="4s"
           repeatCount="indefinite"
@@ -46,18 +46,18 @@ const RollyIcon = ({ className = '', size = 24 }) => {
           dur="4s"
           repeatCount="indefinite"
         />
-        <circle cx="9.5" cy="12" r="1" fill="#818CF8">
+        <circle cx="9" cy="11.8" r="1.2" fill="#818CF8">
           <animate
             attributeName="r"
-            values="1;0.8;1"
+            values="1.2;1;1.2"
             dur="4s"
             repeatCount="indefinite"
           />
         </circle>
-        <circle cx="14.5" cy="12" r="1" fill="#818CF8">
+        <circle cx="15" cy="11.8" r="1.2" fill="#818CF8">
           <animate
             attributeName="r"
-            values="1;0.8;1"
+            values="1.2;1;1.2"
             dur="4s"
             repeatCount="indefinite"
           />
@@ -66,17 +66,17 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       
       {/* Antenna with float animation */}
       <path
-        d="M12 6V8"
+        d="M12 4.5V7"
         stroke="#C7D2FE"
-        strokeWidth="1.5"
+        strokeWidth="1.8"
         strokeLinecap="round"
       >
         <animate
           attributeName="d"
           values="
-            M12 6V8;
-            M12 5.8V7.8;
-            M12 6V8
+            M12 4.5V7;
+            M12 4.2V6.7;
+            M12 4.5V7
           "
           dur="4s"
           repeatCount="indefinite"
