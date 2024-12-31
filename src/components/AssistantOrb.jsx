@@ -156,9 +156,9 @@ const AssistantOrb = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gradient-to-r from-indigo-200 to-indigo-300 text-indigo-600 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 relative group hover:text-indigo-700"
+        className="bg-gradient-to-r from-indigo-200 to-indigo-300 text-indigo-600 rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 relative group hover:text-indigo-700"
       >
-        <RollyIcon className="w-8 h-8 transition-transform group-hover:scale-110" />
+        <RollyIcon className="w-10 h-10 transition-transform group-hover:scale-110" />
         {!isOpen && (
           <motion.div
             initial={{ scale: 0 }}
