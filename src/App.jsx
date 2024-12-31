@@ -133,7 +133,7 @@ function App() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900">Tech Job Board</h1>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">RoleArc</h1>
           <p className="mt-2 text-xl text-gray-600">Find your next opportunity</p>
         </header>
 
