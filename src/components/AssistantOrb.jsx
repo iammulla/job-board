@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { ChatBubbleLeftEllipsisIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
+import RollyIcon from './RollyIcon';
 
 const sampleQuestions = [
   "How do I find specific roles in Product Management?",
   "As a student intern, what would increase my chances for landing a role in FAANG?",
   "What skills should I highlight for software engineering roles?",
-  "How can I make my profile stand out to recruiters?"
+  "How can I make my profile stand out to recruiters?",
+  "What are the most in-demand tech roles right now?",
+  "How do I transition from engineering to product management?"
 ];
 
 const AssistantOrb = () => {
@@ -25,15 +28,26 @@ const AssistantOrb = () => {
     setInputValue('');
     setIsTyping(true);
 
-    // TODO: Integrate with OpenAI API
-    // Simulate AI response for now
-    setTimeout(() => {
+    try {
+      // TODO: Replace with actual OpenAI API call
+      const response = await new Promise(resolve => 
+        setTimeout(() => resolve({
+          content: "I'm Rolly, your AI career guide! I'm here to help you navigate your job search journey. This is a placeholder response - we'll be integrating with OpenAI soon to provide more helpful answers!"
+        }), 1000)
+      );
+
       setMessages(prev => [...prev, {
         type: 'assistant',
-        content: "I'm here to help! This is a placeholder response. We'll integrate with a real AI service soon."
+        content: response.content
       }]);
+    } catch (error) {
+      setMessages(prev => [...prev, {
+        type: 'assistant',
+        content: "I apologize, but I'm having trouble connecting right now. Please try again in a moment."
+      }]);
+    } finally {
       setIsTyping(false);
-    }, 1000);
+    }
   };
 
   const handleSampleQuestion = (question) => {
@@ -53,7 +67,10 @@ const AssistantOrb = () => {
             {/* Chat Header */}
             <div className="p-4 bg-gradient-to-r from-indigo-400 to-indigo-600 text-white">
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold">RoleArc Assistant</h3>
+                <div className="flex items-center gap-2">
+                  <RollyIcon size={24} />
+                  <h3 className="font-semibold">Rolly</h3>
+                </div>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-white/20 rounded-full transition-colors"
@@ -67,7 +84,10 @@ const AssistantOrb = () => {
             <div className="h-96 overflow-y-auto p-4 space-y-4">
               {messages.length === 0 ? (
                 <div className="space-y-4">
-                  <p className="text-gray-500 text-sm">Try asking questions like:</p>
+                  <div className="flex items-center gap-2 text-gray-500">
+                    <RollyIcon size={20} className="text-indigo-500" />
+                    <p className="text-sm">Hi! I'm Rolly, your AI career guide. Try asking me questions like:</p>
+                  </div>
                   {sampleQuestions.map((question, index) => (
                     <button
                       key={index}
@@ -84,6 +104,9 @@ const AssistantOrb = () => {
                     key={index}
                     className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
+                    {message.type === 'assistant' && (
+                      <RollyIcon size={20} className="text-indigo-500 mt-1 mr-2" />
+                    )}
                     <div
                       className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                         message.type === 'user'
@@ -97,9 +120,10 @@ const AssistantOrb = () => {
                 ))
               )}
               {isTyping && (
-                <div className="flex justify-start">
+                <div className="flex justify-start items-start">
+                  <RollyIcon size={20} className="text-indigo-500 mt-1 mr-2" />
                   <div className="bg-gray-100 rounded-2xl px-4 py-2 text-gray-500">
-                    Typing...
+                    Thinking...
                   </div>
                 </div>
               )}
@@ -112,7 +136,7 @@ const AssistantOrb = () => {
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
-                  placeholder="Ask a question..."
+                  placeholder="Ask Rolly a question..."
                   className="flex-1 rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:border-indigo-500"
                 />
                 <button
@@ -132,9 +156,18 @@ const AssistantOrb = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow"
+        className="bg-gradient-to-r from-indigo-400 to-indigo-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow relative"
       >
-        <ChatBubbleLeftEllipsisIcon className="w-6 h-6" />
+        <RollyIcon className="w-6 h-6" />
+        {!isOpen && (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+          >
+            1
+          </motion.div>
+        )}
       </motion.button>
     </div>
   );
