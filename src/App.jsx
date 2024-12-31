@@ -7,6 +7,7 @@ import LikedJobsPopup from './components/LikedJobsPopup';
 import ProfileMenu from './components/ProfileMenu';
 import LoginDropdown from './components/LoginDropdown';
 import RoleArcLogo from './components/RoleArcLogo';
+import AssistantOrb from './components/AssistantOrb';
 import { 
   ViewColumnsIcon, 
   ViewfinderCircleIcon,
@@ -209,6 +210,8 @@ function App() {
         likedJobs={likedJobs}
         buttonRef={likedJobsButtonRef}
       />
+
+      <AssistantOrb />
     </div>
   )
 }
