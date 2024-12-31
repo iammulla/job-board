@@ -16,12 +16,12 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       {/* Robot face plate */}
       <path
         d="M6 11C6 8.79086 8.79086 6 12 6C15.2091 6 18 8.79086 18 11V15C18 16.1046 17.1046 17 16 17H8C6.89543 17 6 16.1046 6 15V11Z"
-        fill="white"
-        fillOpacity="0.9"
+        fill="#EEF2FF"  /* indigo-50 */
+        fillOpacity="0.95"
       />
       
       {/* Eyes */}
-      <circle cx="9" cy="12" r="1.25" fill="currentColor">
+      <circle cx="9" cy="12" r="1.25" fill="#818CF8">  {/* indigo-400 */}
         <animate
           attributeName="r"
           values="1.25;1;1.25"
@@ -29,7 +29,7 @@ const RollyIcon = ({ className = '', size = 24 }) => {
           repeatCount="indefinite"
         />
       </circle>
-      <circle cx="15" cy="12" r="1.25" fill="currentColor">
+      <circle cx="15" cy="12" r="1.25" fill="#818CF8">  {/* indigo-400 */}
         <animate
           attributeName="r"
           values="1.25;1;1.25"
@@ -41,7 +41,7 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       {/* Antenna */}
       <path
         d="M12 3.5V5.5M12 5.5C13.1046 5.5 14 4.60457 14 3.5V3"
-        stroke="currentColor"
+        stroke="#C7D2FE"  /* indigo-200 */
         strokeWidth="1.5"
         strokeLinecap="round"
       >
@@ -58,7 +58,7 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       {/* Mouth/Speaker */}
       <path
         d="M9 14.5C9.5 15.5 10.5 16 12 16C13.5 16 14.5 15.5 15 14.5"
-        stroke="currentColor"
+        stroke="#818CF8"  /* indigo-400 */
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -66,7 +66,7 @@ const RollyIcon = ({ className = '', size = 24 }) => {
       {/* Signal waves */}
       <path
         d="M19 10C19.5 11 19.5 13 19 14M5 10C4.5 11 4.5 13 5 14"
-        stroke="currentColor"
+        stroke="#C7D2FE"  /* indigo-200 */
         strokeWidth="1.5"
         strokeLinecap="round"
       >
